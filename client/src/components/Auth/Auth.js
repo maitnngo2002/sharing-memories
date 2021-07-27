@@ -9,16 +9,20 @@ import { useHistory } from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 
 import useStyles from './styles';
+
+const initialState = {firstName: "", lastName: "", email: "", password: "", confirmPassword: ""};
+
 const Auth = () => {
     const classes = useStyles();
     
     const [showPassword, setShowPassword] = useState(false);
     const [isSignUp, setIsSignUp] = useState(false);
+    const [formData, setFormData] = useState(initialState);
     const dispatch = useDispatch();
     const history = useHistory();
 
     const handleSubmit = () => {
-
+        console.log(formData);
     }
     const handleChange = () => {
 
