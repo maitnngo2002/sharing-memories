@@ -30,7 +30,7 @@ const Post = ({ post, setCurrentId }) => {
 
   // Likes subcomponent
   const Likes = () => {
-    if (post.likes.length > 0) {
+    if (post?.likes?.length > 0) {
       return post.likes.find(
         (like) => like === (user?.result?.googleId || user?.result?._id)
       ) ? (
@@ -54,7 +54,7 @@ const Post = ({ post, setCurrentId }) => {
     );
   };
   return (
-    <Card className={classes.card} raised elevation={6} onClick={openPost}>
+    <Card className={classes.card} raised elevation={6}>
       {/* <ButtonBase
         component="span"
         name="test"
